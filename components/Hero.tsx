@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const whatsappBookDemoUrl =
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
+
 export default function Hero() {
   return (
     <section className="py-20">
@@ -17,7 +20,9 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/#book-demo"
+              href={whatsappBookDemoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-blue-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
             >
               Book Demo

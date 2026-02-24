@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const whatsappBookDemoUrl =
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
+
 export default function Footer() {
   return (
     <footer className="bg-blue-900 py-14 text-white">
@@ -31,7 +34,7 @@ export default function Footer() {
             </li>
           
             <li>
-              <Link href="/#book-demo" className="transition hover:text-gray-200">
+              <Link href={whatsappBookDemoUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-200">
                 Book Demo
               </Link>
             </li>

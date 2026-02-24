@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const whatsappBookDemoUrl =
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
+
 const plans = [
   {
     name: "Starter",
@@ -71,7 +74,9 @@ export default function Pricing() {
             Compare Plans
           </Link>
           <Link
-            href="/#book-demo"
+            href={whatsappBookDemoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-blue-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
           >
             Book Demo

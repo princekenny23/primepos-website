@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const whatsappBookDemoUrl =
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
+
 export default function CTA() {
   return (
     <section id="book-demo" className="py-20">
@@ -14,7 +17,9 @@ export default function CTA() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/#book-demo"
+              href={whatsappBookDemoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-900 transition hover:bg-gray-200"
             >
               Book Demo

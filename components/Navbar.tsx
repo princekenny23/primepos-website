@@ -6,6 +6,9 @@ const navLinks = [
   { href: "/#pricing", label: "Pricing" },
 ];
 
+const whatsappBookDemoUrl =
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
+
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
@@ -28,7 +31,9 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
-            href="/#book-demo"
+            href={whatsappBookDemoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-blue-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-800"
           >
             Book Demo
