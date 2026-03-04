@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const whatsappBookDemoUrl =
   "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
@@ -8,7 +9,9 @@ export default function Footer() {
     <footer className="bg-blue-900 py-14 text-white">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <h3 className="text-xl font-bold">PrimePOS</h3>
+          <Link href="/" className="inline-block transition hover:opacity-90" aria-label="PrimePOS home">
+            <Image src="/logo.png" alt="PrimePOS logo" width={260} height={76} className="h-16 w-auto" />
+          </Link>
           <p className="mt-3 max-w-sm text-gray-200">
             Powering smarter retail operations across Africa.
           </p>
@@ -44,7 +47,7 @@ export default function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-200">Contact</h4>
           <ul className="mt-4 space-y-2 text-sm text-gray-100">
-            <li>Email: kwitondakenny@gmail.com</li>
+            <li>Email: primexltd876@gmail.com</li>
             <li>Phone: +265 997575865/881302440</li>
             <li>Lilongwe, Malawi</li>
           </ul>

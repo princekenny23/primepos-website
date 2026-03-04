@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const features = [
   {
     title: "Real Time Monitoring",
@@ -9,7 +11,7 @@ const features = [
   },
   {
     title: "Stock Management",
-    description: "Monitor item levels, stock movement, and low-stock alerts in real time.",
+    description: "Monitor item levels, stock movement, expiries, and low-stock alerts in real time.",
   },
   {
     title: "Bill and Invoice Monitoring",
@@ -29,24 +31,31 @@ export default function Features() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Core Features</h2>
-          <p className="mt-4 text-gray-600">Built for daily retail operations and growth.</p>
-        </div>
+        <div className="grid items-start gap-10 lg:grid-cols-2">
+          <div className="order-2 lg:order-1">
+            <Image
+              src="/pos3.jpg"
+              alt="PrimePOS dashboard"
+              width={1000}
+              height={900}
+              className="h-auto w-full rounded-2xl border border-gray-200 object-cover shadow-sm"
+              priority
+            />
+          </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
-            <article
-              key={feature.title}
-              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
-            >
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-900 text-sm font-semibold text-white">
-                ✓
-              </span>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">{feature.title}</h3>
-              <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
-            </article>
-          ))}
+          <div className="order-1 text-left lg:order-2">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Core Features</h2>
+            <p className="mt-4 text-gray-600">Built for daily retail operations and growth.</p>
+
+            <ul className="mt-12 space-y-6">
+              {features.map((feature) => (
+                <li key={feature.title}>
+                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
