@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <Link href="/" className="inline-block transition hover:opacity-90" aria-label="PrimePOS home">
-            <Image src="/logo.png" alt="PrimePOS logo" width={260} height={76} className="h-16 w-auto" />
+            <Image src="/logo.png" alt="PrimePOS logo" width={320} height={133} className="h-32 w-auto" />
           </Link>
           <p className="mt-3 max-w-sm text-gray-200">
             Powering smarter retail operations across Africa.

@@ -7,7 +7,7 @@ const features = [
   },
   {
     title: "Multi-Store Management",
-    description: "Manage multiple branches from one centralized system with clear, real-time visibility across all locations.",
+    description: "Manage multiple shops from one centralized platform, including wholesale and retail stores, bars and restaurants, pharmacies, and more.",
   },
   {
     title: "Stock Management",

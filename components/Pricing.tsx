@@ -8,7 +8,7 @@ const plans = [
     name: "Starter",
     price: "MK 15,000 / month",
     subtitle: "Best for single-store businesses starting digital operations.",
-    features: ["1 POS terminal", "Sales and stock basics", "Daily sales reports", "Email support"],
+    features: ["1 POS terminal", "Sales and stock management", "Sales reports", "Full support"],
     highlighted: false,
   },
   {
@@ -17,9 +17,9 @@ const plans = [
     subtitle: "Best for growing retailers managing multiple teams.",
     features: [
       "Up to 2 POS terminals",
-      "Multi-user roles and permissions",
-      "Advanced inventory and purchase workflows",
-      "Priority support",
+      "Multi-user ",
+      "inventory and purchase management", 
+      "Full support",
     ],
     highlighted: true,
   },
@@ -31,7 +31,7 @@ const plans = [
       "Unlimited terminals and outlets",
       "Centralized control dashboard",
       "Dedicated onboarding and training",
-      "Custom integrations and SLA support",
+      "Custom integrations and support",
     ],
     highlighted: false,
   },
@@ -67,12 +67,6 @@ export default function Pricing() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/#pricing"
-            className="rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:border-blue-900 hover:text-blue-900"
-          >
-            Compare Plans
-          </Link>
           <Link
             href={whatsappBookDemoUrl}
             target="_blank"

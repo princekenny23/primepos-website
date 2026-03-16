@@ -87,60 +87,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="solutions" className="bg-gray-50 py-20">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Solutions by Business Type</h2>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <article className="rounded-2xl bg-white p-6 shadow-sm">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-900/10 text-blue-900">
-                <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M3 10h18M5 6h14l2 12H3L5 6Zm4 4v4m4-4v4m4-4v4" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900">Grocery & Supermarkets</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                High-volume checkout, barcode flow, and branch inventory visibility.
-              </p>
-            </article>
-            <article className="rounded-2xl bg-white p-6 shadow-sm">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-900/10 text-blue-900">
-                <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M9 12h6m-3-3v6M7 3h10l2 4v11a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V7l2-4Z" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900">Pharmacies</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Accurate item tracking, expiry-aware stock discipline, and controlled user roles.
-              </p>
-            </article>
-            <article className="rounded-2xl bg-white p-6 shadow-sm">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-900/10 text-blue-900">
-                <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M3 7h18M7 7v13m10-13v13M5 20h14M9 11h6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900">Wholesale & Distribution</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Bulk order handling, supplier reconciliation, and branch transfer tracking.
-              </p>
-            </article>
-            <article className="rounded-2xl bg-white p-6 shadow-sm">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-900/10 text-blue-900">
-                <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Zm4 2h8m-8 4h5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900">Specialty Retail</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Variant-aware stock management and product-level profitability insights.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="pricing">
         <Pricing />
       </section>

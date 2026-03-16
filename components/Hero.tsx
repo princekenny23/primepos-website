@@ -9,14 +9,17 @@ export default function Hero() {
     <section className="py-20">
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-blue-900">PrimePOS</p>
-          <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-            Built for African Retail Operations
+          <h1 className="text-5xl font-extrabold uppercase leading-none tracking-tight text-blue-900 sm:text-6xl lg:text-7xl">
+            PRIMEPOS
           </h1>
+          <p className="mt-4 text-xl font-semibold leading-snug text-gray-900 sm:text-2xl">
+            Built for Malawi and Africa wholesale and retail operations
+          </p>
           <p className="mt-6 max-w-xl text-lg text-gray-600">
-            Run sales, stock, and staff across one store or many from a single platform. PrimePOS
-            helps retailers reduce stockouts, speed up checkout, and make better daily decisions
-            with live business data.
+            Run sales, stock, and staff across one shop or many from a single platform. PrimePOS
+            helps businesses manage wholesale and retail outlets, bars and restaurants,
+            pharmacies, and more while reducing stockouts, speeding up checkout, and improving
+            daily decisions with live business data.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
