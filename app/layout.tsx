@@ -18,6 +18,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "PrimePOS | Powering Smart Retail in Africa",
   description: "PrimePOS helps modern retailers manage sales, inventory, and multiple stores in one platform.",
+  icons: {
+    icon: "/icon.jpg",
+    shortcut: "/icon.jpg",
+    apple: "/icon.jpg",
+  },
 };
 
 export default function RootLayout({
