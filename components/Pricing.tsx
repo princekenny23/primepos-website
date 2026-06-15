@@ -124,7 +124,7 @@ export default function Pricing() {
         <div className="mt-20 rounded-2xl border border-gray-200 bg-slate-50 p-10 text-center">
           <h2 className="text-2xl font-bold text-gray-900">Every plan. Every module.</h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
-            We don't lock features behind higher tiers. Every plan gives you the full PrimePOS platform — point of sale, inventory, purchases, and reports.
+            We don&apos;t lock features behind higher tiers. Every plan gives you the full PrimePOS platform — point of sale, inventory, purchases, and reports.
           </p>
         </div>
       </div>
