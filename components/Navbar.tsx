@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 const whatsappBookDemoUrl =
-  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20free trial";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -76,7 +76,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
           >
-            Book Demo
+            Book a free 30-day trial
           </Link>
         </div>
       </nav>

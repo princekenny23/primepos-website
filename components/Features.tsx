@@ -2,59 +2,68 @@ import Image from "next/image";
 
 const features = [
   {
-    title: "Real Time Monitoring",
-    description: "Track live sales, stock changes, and branch activity as they happen.",
+    title: "Fast checkout",
+    description: "Serve customers quickly with barcode scanning, receipts, and effortless payment management.",
   },
   {
-    title: "Multi-Store Management",
-    description: "Manage multiple shops from one centralized platform, including wholesale and retail stores, bars and restaurants, pharmacies, and more.",
+    title: "Inventory control",
+    description: "Track stock, manage reorder levels, and minimize out-of-stock and expired items across every location.",
   },
   {
-    title: "Stock Management",
-    description: "Monitor item levels, stock movement, expiries, and low-stock alerts in real time.",
+    title: "Multi-location visibility",
+    description: "Run a single store or multiple outlets with one dashboard and consistent controls.",
   },
   {
-    title: "Bill and Invoice Monitoring",
-    description: "Keep control of bills and invoices with accurate status tracking.",
+    title: "Sales insights",
+    description: "Get clear reports for daily revenue, best sellers, and stock performance.",
   },
   {
-    title: "Tracking Expenses",
-    description: "Record and monitor daily operating expenses across your business.",
+    title: "Customer accounts",
+    description: "Build loyalty with customer records, credit tracking, and tailored pricing.",
   },
   {
-    title: "Reporting",
-    description: "Generate clear reports for sales, stock, and business performance.",
+    title: "Trusted operations",
+    description: "Secure, reliable software with a simple interface that staff can adopt fast.",
   },
 ];
 
 export default function Features() {
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-slate-50 py-20">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-10 lg:grid-cols-2">
-          <div className="order-2 lg:order-1">
-            <Image
-              src="/pos3.jpg"
-              alt="PrimePOS dashboard"
-              width={1000}
-              height={900}
-              className="h-auto w-full rounded-2xl border border-gray-200 object-cover shadow-sm"
-              priority
-            />
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-900">
+              Core features
+            </p>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Everything a modern business needs in one platform.
+            </h2>
+            <p className="mt-4 max-w-xl text-lg text-gray-600">
+              PrimePOS is built for everyday business, pharmacies, Bars, and wholesalers who need a reliable point-of-sale and inventory management system.
+            </p>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+              {features.map((feature) => (
+                <article key={feature.title} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-gray-600">{feature.description}</p>
+                </article>
+              ))}
+            </div>
           </div>
 
-          <div className="order-1 text-left lg:order-2">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Core Features</h2>
-            <p className="mt-4 text-gray-600">Built for daily retail operations and growth.</p>
-
-            <ul className="mt-12 space-y-6">
-              {features.map((feature) => (
-                <li key={feature.title}>
-                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
-                </li>
-              ))}
-            </ul>
+          <div>
+            <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-sm">
+              <Image
+                src="/pos3.png"
+                alt="PrimePOS dashboard"
+                width={1000}
+                height={900}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
