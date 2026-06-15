@@ -117,11 +117,11 @@ export default function FeaturesPage() {
       <Reveal className="reveal-delay-200">
         <section className="bg-slate-50 py-20">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-24">
+            <div className="space-y-24">
             {features.map((feature, index) => (
               <div
                 key={feature.title}
-                className={`grid gap-8 lg:grid-cols-2 lg:items-center ${
+                className={`grid gap-8 grid-cols-1 md:grid-cols-2 lg:items-center ${
                   index % 2 === 1 ? "lg:grid-flow-dense" : ""
                 }`}
               >

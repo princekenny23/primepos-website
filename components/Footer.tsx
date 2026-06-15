@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const whatsappBookDemoUrl =
-  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20demo";
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20free trial";
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
             <Image src="/logo.png" alt="PrimePOS logo" width={320} height={133} className="h-32 w-auto" />
           </Link>
           <p className="mt-3 max-w-sm text-gray-200">
-            Powering smarter retail operations across Africa.
+            POWERING SMART WHOLESALE & RETAIL BUSINESSES.
           </p>
         </div>
 
@@ -25,11 +25,7 @@ export default function Footer() {
                 Features
               </Link>
             </li>
-            <li>
-              <Link href="/#solutions" className="transition hover:text-gray-200">
-                Solutions
-              </Link>
-            </li>
+         
             <li>
               <Link href="/#pricing" className="transition hover:text-gray-200">
                 Pricing
@@ -38,7 +34,7 @@ export default function Footer() {
           
             <li>
               <Link href={whatsappBookDemoUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-200">
-                Book Demo
+                Book a 30-day Free Trial
               </Link>
             </li>
           </ul>
@@ -54,7 +50,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-10 w-full max-w-7xl border-t border-blue-800 px-4 pt-6 text-sm text-gray-200 sm:px-6 lg:px-8">
-        © 2026 Primex LTD. All rights reserved.
+        © 2026 Primex Technologies. All rights reserved.
       </div>
     </footer>
   );

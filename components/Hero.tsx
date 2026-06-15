@@ -41,9 +41,10 @@ export default function Hero() {
           <Image
             src="/pos2.png"
             alt="PrimePOS dashboard preview"
-            width={1200}
-            height={900}
-            className="h-full w-full object-cover"
+              width={1200}
+              height={900}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 40vw"
+              className="h-full w-full object-cover"
             priority
           />
         </div>

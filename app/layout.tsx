@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "PrimePOS | Powering Smart Retail in Africa",
-  description: "PrimePOS helps modern retailers manage sales, inventory, and multiple stores in one platform.",
+  title: "PrimePOS | Powering Smart Wholesale & Retail Businesses",
+  description: "PrimePOS helps modern wholesale and retail businesses manage sales, inventory, and multiple stores in one platform.",
   icons: {
     icon: "/icon.jpg",
     shortcut: "/icon.jpg",

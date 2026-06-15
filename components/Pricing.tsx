@@ -55,12 +55,12 @@ export default function Pricing() {
     <section className="py-20 bg-white">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold sm:text-5xl text-gray-900">Priced in Kwacha. Built for Malawi.</h1>
-          <p className="mt-6 text-lg text-gray-600">No USD surprises. All plans are priced in MWK and paid by Airtel Money, TNM Mpamba, or card — the same way your customers pay you. Start with a 30-day free trial.</p>
+          <h1 className="text-4xl font-bold sm:text-5xl text-gray-900">Priced in Kwacha.</h1>
+          <p className="mt-6 text-lg text-gray-600">All plans are priced in MWK. Start with a 30-day free trial.</p>
         </div>
 
         <Reveal className="reveal-delay-200">
-          <div className="mt-16 grid gap-8 grid-cols-4">
+          <div className="mt-16 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {plans.map((plan) => (
               <article
                 key={plan.name}

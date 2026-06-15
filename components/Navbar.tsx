@@ -11,10 +11,11 @@ const navLinks = [
 ];
 
 const whatsappBookDemoUrl =
-  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%20free trial";
+  "https://wa.me/265997575865?text=Hi%20PrimePOS%2C%20I%20want%20to%20book%20a%2030-day%20free%20trial";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -34,28 +35,33 @@ export default function Navbar() {
 
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-blue-800 bg-blue-900 backdrop-blur transition-transform duration-300 ${
+      className={`sticky top-0 z-50 border-b border-blue-800 bg-blue-900/95 backdrop-blur transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="transition hover:opacity-90" aria-label="PrimePOS home">
-          <Image
-            src="/logo.png"
-            alt="PrimePOS logo"
-            width={320}
-            height={133}
-            className="h-32 w-auto"
-            priority
-          />
+      <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <Link href="/" className="inline-flex items-center gap-3 transition hover:opacity-90" aria-label="PrimePOS home">
+          <Image src="/logo.png" alt="PrimePOS logo" width={120} height={50} className="h-10 w-auto" priority />
+          <span className="text-sm font-semibold text-white">PrimePOS</span>
         </Link>
+
+        <div className="flex items-center gap-3 lg:hidden">
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            onClick={() => setIsOpen((open) => !open)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-blue-800 text-white shadow-sm transition hover:bg-blue-700"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
 
         <div className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
@@ -69,16 +75,44 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="hidden items-center gap-2 sm:gap-3 lg:flex">
           <Link
             href={whatsappBookDemoUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
           >
-            Book a free 30-day trial
+            Book a 30-day free trial
           </Link>
         </div>
+
+        {isOpen && (
+          <div className="w-full lg:hidden">
+            <div className="rounded-3xl border border-blue-700/50 bg-blue-900 p-5 shadow-xl shadow-black/10">
+              <div className="flex flex-col gap-3">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="rounded-2xl px-4 py-3 text-sm font-medium text-white transition hover:bg-blue-800"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <Link
+                  href={whatsappBookDemoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-2xl bg-white px-4 py-3 text-center text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
+                >
+                  Book a 30-day free trial
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

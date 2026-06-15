@@ -14,7 +14,7 @@ export default function Home() {
           <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-900">
-                Retail technology for Africa
+                POWERING SMART WHOLESALE & RETAIL BUSINESSES
               </p>
               <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Built for fast checkout, inventory control, and better business decisions.
