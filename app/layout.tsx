@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "PrimePOS | Powering Smart Wholesale & Retail Businesses",
   description: "PrimePOS helps modern wholesale and retail businesses manage sales, inventory, and multiple stores in one platform.",
   icons: {
-    icon: "/icon.jpg",
-    shortcut: "/icon.jpg",
-    apple: "/icon.jpg",
+    icon: "/icon2.png",
+    shortcut: "/icon2.png",
+    apple: "/icon2.png",
   },
 };
 

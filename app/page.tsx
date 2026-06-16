@@ -9,39 +9,35 @@ export default function Home() {
     <>
       <Hero />
 
-      <Reveal>
-        <section className="py-20">
-          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-900">
-                POWERING SMART WHOLESALE & RETAIL BUSINESSES
-              </p>
-              <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-                Built for fast checkout, inventory control, and better business decisions.
-              </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                PrimePOS brings one platform for sales, stock, and customer management so African
-                retailers can simplify operations, reduce shrinkage, and grow with confidence.
-              </p>
-            </div>
-          </div>
-        </section>
-      </Reveal>
+   <Reveal>
+  <section className="py-20">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-900">
+          POWERING SMART WHOLESALE & RETAIL BUSINESSES
+        </p>
 
-      <Reveal className="reveal-delay-200">
-        <section id="features">
-          <div className="mt-10 flex justify-center">
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/features"
-                className="rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:border-blue-900 hover:text-blue-900"
-              >
-                Explore Features
-              </Link>
-            </div>
-          </div>
-        </section>
-      </Reveal>
+        <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+          Built for fast checkout, inventory control, and better business decisions.
+        </h2>
+
+        <p className="mt-4 text-lg text-gray-600">
+          PrimePOS brings one platform for sales, stock, and customer management so African
+          retailers can simplify operations, reduce shrinkage, and grow with confidence.
+        </p>
+
+        <div className="mt-8">
+          <Link
+            href="/features"
+            className="text-lg font-semibold text-blue-900 transition hover:text-blue-700"
+          >
+            View All PrimePOS Features →
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
+</Reveal>
 
       <Reveal className="reveal-delay-400">
         <section className="py-20 bg-white">

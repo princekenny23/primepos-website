@@ -43,7 +43,7 @@ export default function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-200">Contact</h4>
           <ul className="mt-4 space-y-2 text-sm text-gray-100">
-            <li>Email: primexltd876@gmail.com</li>
+            <li>Email: sales@primeposs.com</li>
             <li>Phone: +265 997575865/881302440</li>
             <li>Lilongwe, Malawi</li>
           </ul>

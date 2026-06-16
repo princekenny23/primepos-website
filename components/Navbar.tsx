@@ -46,7 +46,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="inline-flex items-center gap-3 transition hover:opacity-90" aria-label="PrimePOS home">
-          <Image src="/logo.png" alt="PrimePOS logo" width={120} height={50} className="h-10 w-auto" priority />
+          <Image src="/icon.jpg" alt="PrimePOS logo" width={120} height={50} className="h-10 w-auto" priority />
           <span className="text-sm font-semibold text-white">PrimePOS</span>
         </Link>
 

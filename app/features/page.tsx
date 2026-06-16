@@ -68,6 +68,30 @@ const features = [
     ],
     image: "/table.png",
   },
+
+  {
+  title: "Profit & Loss Reporting",
+  description:
+    "Monitor business performance with detailed profit, revenue, and expense reports in real time.",
+  details: [
+    "Track sales, expenses, and profits",
+    "Generate daily, weekly, and monthly reports",
+    "Make data-driven business decisions",
+  ],
+  image: "/profit.png",
+},
+{
+  title: "Inventory Management",
+  description:
+    "Keep stock levels accurate, track product movements, and prevent stock shortages with automated inventory tools.",
+  details: [
+    "Real-time stock tracking",
+    "Low-stock alerts and notifications",
+    "Inventory adjustments and stock history",
+  ],
+  image: "/inventory.png",
+},
+  
 ];
 
 export default function FeaturesPage() {
