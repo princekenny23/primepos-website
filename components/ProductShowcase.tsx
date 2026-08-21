@@ -12,7 +12,7 @@ const modules = [
 
 export default function ProductShowcase() {
   const [active, setActive] = useState(0);
-  const module = modules[active];
+  const activeModule = modules[active];
 
   return (
     <section id="product" className="product-band py-24">
@@ -31,9 +31,9 @@ export default function ProductShowcase() {
             ))}
           </div>
           <div className="showcase-window">
-            <div className="showcase-heading"><span>{module.name} / PrimePOS</span><span className="live-label"><i /> Live workspace</span></div>
-            <div className="showcase-image"><Image key={module.image} src={module.image} alt={`${module.name} PrimePOS interface`} fill sizes="(max-width: 1024px) 100vw, 65vw" className="object-cover" /></div>
-            <p className="showcase-caption">{module.text}</p>
+            <div className="showcase-heading"><span>{activeModule.name} / PrimePOS</span><span className="live-label"><i /> Live workspace</span></div>
+            <div className="showcase-image"><Image key={activeModule.image} src={activeModule.image} alt={`${activeModule.name} PrimePOS interface`} fill sizes="(max-width: 1024px) 100vw, 65vw" className="object-cover" /></div>
+            <p className="showcase-caption">{activeModule.text}</p>
           </div>
         </div>
       </div>
