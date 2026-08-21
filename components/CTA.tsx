@@ -9,7 +9,7 @@ export default function CTA() {
     <Reveal className="reveal-delay-200">
       <section id="book-demo" className="py-20">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] bg-blue-900 px-8 py-16 text-center text-white sm:px-12">
+        <div className="relative overflow-hidden rounded-2xl bg-navy px-8 py-16 text-center text-white shadow-2xl shadow-blue-950/20 sm:px-12">
           <h2 className="text-3xl font-bold sm:text-4xl">
             See PrimePOS in action and get your team ready to sell smarter.
           </h2>
@@ -22,7 +22,7 @@ export default function CTA() {
               href={whatsappBookDemoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-900 transition hover:bg-gray-200"
+              className="button-primary bg-white text-blue-700 hover:bg-blue-50"
             >
               Book a 30-day free trial
             </Link>

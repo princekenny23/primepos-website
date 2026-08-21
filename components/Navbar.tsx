@@ -7,7 +7,7 @@ import Image from "next/image";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/features", label: "Features" },
-  { href: "/#pricing", label: "Pricing" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const whatsappBookDemoUrl =
@@ -40,14 +40,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-blue-800 bg-blue-900/95 backdrop-blur transition-transform duration-300 ${
+      className={`sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="inline-flex items-center gap-3 transition hover:opacity-90" aria-label="PrimePOS home">
-          <Image src="/icon.jpg" alt="PrimePOS logo" width={120} height={50} className="h-10 w-auto" priority />
-          <span className="text-sm font-semibold text-white">PrimePOS</span>
+          <Image src="/icon3.jpg" alt="PrimePOS logo" width={120} height={50} className="h-10 w-auto" priority />
+          <span className="text-sm font-bold tracking-tight text-slate-900">PrimePOS</span>
         </Link>
 
         <div className="flex items-center gap-3 lg:hidden">
@@ -55,7 +55,7 @@ export default function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setIsOpen((open) => !open)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-blue-800 text-white shadow-sm transition hover:bg-blue-700"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:border-blue-500"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -68,7 +68,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white transition hover:text-blue-100"
+              className="text-sm font-medium text-slate-600 transition hover:text-blue-600"
             >
               {link.label}
             </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
             href={whatsappBookDemoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
+            className="button-primary px-4 py-2"
           >
             Book a 30-day free trial
           </Link>

@@ -1,187 +1,54 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
-const features = [
-  {
-    title: "Point of Sale",
-    description:
-      "Fast checkout with barcode scanning, receipts, split payments, and cash management in one intuitive interface.",
-    details: [
-      "Quick product lookup and barcode scanning",
-      "Flexible payment methods and receipts",
-      "Cashier-friendly layout for faster service",
-    ],
-    image: "/pos.png",
-  },
-  {
-    title: "Reports & insights",
-    description:
-      "Track sales, stock movement, cashier performance, and store results with clear reports and export-ready summaries.",
-    details: [
-      "Daily, weekly and monthly sales reports",
-      "Inventory movement and stock alerts",
-      "Simple export for accounting and management",
-    ],
-    image: "/sales insights.png",
-  },
-  {
-    title: "Customer credit",
-    description:
-      "Create customer accounts, manage credit limits, track balances, and collect payments with built-in credit control.",
-    details: [
-      "Customer profiles with credit terms",
-      "Outstanding balance tracking",
-      "Payment collection at checkout",
-    ],
-    image: "/credit.png",
-  },
-  {
-    title: "Multi-branch management",
-    description:
-      "Run multiple outlets from one dashboard, sync inventory across stores, and manage users with consistent controls.",
-    details: [
-      "Centralized inventory and stock sync",
-      "Store-level performance reports",
-      "Role-based access for branch teams",
-    ],
-    image: "/outlet.png",
-  },
-  {
-    title: "Tab management for bars",
-    description:
-      "Open, track, and settle bar tabs with a fast POS workflow built for busy venues.",
-    details: [
-      "Create and manage drink tabs",
-      "Track tab orders in real time",
-      "Close tabs quickly and securely",
-    ],
-    image: "/tab.png",
-  },
-  {
-    title: "Table management",
-    description:
-      "Assign tables, manage seating, and coordinate orders from one intuitive service board.",
-    details: [
-      "Floor plans and table status",
-      "Assign orders to tables instantly",
-      "Optimize seating for busy shifts",
-    ],
-    image: "/table.png",
-  },
-
-  {
-  title: "Profit & Loss Reporting",
-  description:
-    "Monitor business performance with detailed profit, revenue, and expense reports in real time.",
-  details: [
-    "Track sales, expenses, and profits",
-    "Generate daily, weekly, and monthly reports",
-    "Make data-driven business decisions",
-  ],
-  image: "/profit.png",
-},
-{
-  title: "Inventory Management",
-  description:
-    "Keep stock levels accurate, track product movements, and prevent stock shortages with automated inventory tools.",
-  details: [
-    "Real-time stock tracking",
-    "Low-stock alerts and notifications",
-    "Inventory adjustments and stock history",
-  ],
-  image: "/inventory.png",
-},
-  
+const sections = [
+  { number: "01", title: "Point of Sale", description: "A fast, cashier-friendly checkout for busy counters, built to keep the queue moving.", details: ["Fast checkout and barcode scanning", "Multiple payment methods and receipts", "Discounts, returns and offline selling"], image: "/pos.png" },
+  { number: "02", title: "Inventory Management", description: "See exactly what is in stock, where it is, and what needs your attention before it becomes a problem.", details: ["Real-time stock levels and adjustments", "Low-stock alerts and multiple warehouses", "Product, movement and cost tracking"], image: "/inventory.png" },
+  { number: "03", title: "Sales & Purchases", description: "Connect what you sell with what you buy, from the first quote to the final stock receipt.", details: ["Invoices, quotes and sales history", "Suppliers, purchase orders and bills", "Credit sales and receiving stock"], image: "/credit.png" },
+  { number: "04", title: "Business Reports", description: "Finally see what is happening in your business with clear, timely numbers your team can act on.", details: ["Daily sales and gross profit", "Expenses, stock value and credit", "Best-selling products and trends"], image: "/sales insights.png" },
+  { number: "05", title: "Multi-Branch Management", description: "Bring every outlet into one view. Compare performance, coordinate stock and keep standards consistent.", details: ["Central dashboard for every branch", "Branch-level sales and stock visibility", "Role-based access for local teams"], image: "/outlet.png" },
 ];
 
 export default function FeaturesPage() {
   return (
     <>
       <Reveal>
-        <section className="bg-gradient-to-r from-blue-900 to-indigo-900 py-20 text-white">
-          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <section className="feature-hero py-24 text-white sm:py-32">
+          <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
             <div>
-              
-              <h1 className="mt-4 text-4xl font-bold sm:text-5xl">
-                Everything a modern business needs in one platform.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg text-blue-100">
-                PrimePOS is built for everyday business one platform for fast sales checkout, real-time insights, customer credit and multi-store control.
-              </p>
-              <div className="mt-10 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-3xl bg-white/10 p-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-100">POS</p>
-                  <p className="mt-3 text-sm text-blue-100">Checkout, payments and stock updates in one smooth workflow.</p>
-                </div>
-                <div className="rounded-3xl bg-white/10 p-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-100">Customer credit</p>
-                  <p className="mt-3 text-sm text-blue-100">Credit accounts, balance tracking and payment collection built in.</p>
-                </div>
-              </div>
+              <p className="eyebrow text-blue-200"><span className="status-dot" /> The PrimePOS platform</p>
+              <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl">Everything you need to run your business.</h1>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-blue-100">Sell faster. Control your stock. Manage customers. Understand your numbers.</p>
+              <Link href="/#pricing" className="button-primary mt-9 bg-white text-blue-700 hover:bg-blue-50">See plans <span aria-hidden="true">→</span></Link>
             </div>
-
-            <div className="mx-auto w-full max-w-2xl">
-              <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-sm">
-                <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
-                  <Image
-                    src="/dash.png"
-                    alt="PrimePOS dashboard screenshot"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            <div className="feature-dashboard"><Image src="/dash.png" alt="PrimePOS dashboard overview" fill priority sizes="(max-width: 1024px) 100vw, 60vw" className="object-cover" /></div>
           </div>
-        </div>
-      </section>
+        </section>
       </Reveal>
 
-      <Reveal className="reveal-delay-200">
-        <section className="bg-slate-50 py-20">
+      <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="space-y-24">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className={`grid gap-8 grid-cols-1 md:grid-cols-2 lg:items-center ${
-                  index % 2 === 1 ? "lg:grid-flow-dense" : ""
-                }`}
-              >
-                <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-sm">
-                    <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
-                    <Image
-                      src={feature.image}
-                      alt={`${feature.title} screenshot`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  </div>
-                </div>
-
-                <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-900">
-                    {feature.title}
-                  </p>
-                  <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">{feature.title}</h2>
-                  <p className="mt-6 max-w-xl text-lg text-gray-600">{feature.description}</p>
-                  <ul className="mt-8 space-y-4 text-gray-700">
-                    {feature.details.map((detail) => (
-                      <li key={detail} className="flex gap-3">
-                        <span className="mt-1 inline-flex h-3 w-3 rounded-full bg-blue-900"></span>
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="mx-auto max-w-2xl text-center"><p className="eyebrow justify-center"><span className="blue-dot" /> Connected by design</p><h2 className="section-title mt-5">One sale updates the whole business.</h2><p className="section-copy mx-auto mt-5">PrimePOS turns every transaction into a clearer view of stock, cash, customers and performance.</p></div>
+          <div className="business-flow mt-14 grid gap-3 sm:grid-cols-4">{["SALE|Transaction completed", "STOCK|Inventory decreases", "CASH|Revenue increases", "REPORTS|Dashboard updates"].map((item) => { const [title, text] = item.split("|"); return <div key={title}><b>{title}</b><span>{text}</span></div>; })}</div>
         </div>
       </section>
+
+      <section className="bg-slate-50 py-20 sm:py-28">
+        <div className="mx-auto w-full max-w-7xl space-y-24 px-4 sm:px-6 lg:px-8 sm:space-y-32">
+          {sections.map((section, index) => (
+            <Reveal key={section.number} className={index % 2 ? "reveal-delay-200" : ""}>
+              <article className={`feature-row grid gap-10 lg:grid-cols-2 lg:items-center ${index % 2 ? "lg:[&>div:first-child]:order-2" : ""}`}>
+                <div className="feature-shot"><Image src={section.image} alt={`${section.title} PrimePOS interface`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" /></div>
+                <div className="max-w-xl"><p className="eyebrow"><span className="blue-dot" /> {section.number} / PrimePOS module</p><h2 className="section-title mt-5">{section.title}</h2><p className="section-copy mt-5">{section.description}</p><ul className="feature-list mt-8">{section.details.map((detail) => <li key={detail}><span>✓</span>{detail}</li>)}</ul></div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <Reveal>
+        <section className="offline-band py-24"><div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8"><p className="eyebrow justify-center text-blue-200"><span className="status-dot" /> 06 / Offline first</p><h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-6xl">No internet? Keep selling.</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">Made for the way African businesses operate: resilient through outages, load shedding and unreliable connections.</p><div className="offline-flow mt-14 grid gap-4 sm:grid-cols-6">{["ONLINE", "INTERNET LOST", "OFFLINE MODE", "KEEP SELLING", "RESTORED", "SYNC COMPLETE ✓"].map((step, index) => <div key={step} className="flow-step"><span>0{index + 1}</span><strong>{step}</strong></div>)}</div></div></section>
       </Reveal>
     </>
   );

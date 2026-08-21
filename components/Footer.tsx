@@ -31,6 +31,11 @@ export default function Footer() {
                 Pricing
               </Link>
             </li>
+            <li>
+              <Link href="/contact" className="transition hover:text-gray-200">
+                Contact
+              </Link>
+            </li>
           
             <li>
               <Link href={whatsappBookDemoUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-200">

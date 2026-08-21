@@ -8,47 +8,47 @@ const whatsappBookDemoUrl =
 export default function Hero() {
   return (
     <Reveal>
-      <section className="pt-20 pb-16">
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-         
-          <h1 className="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-blue-900 sm:text-6xl lg:text-7xl">
-            Modern point-of-sale for All businesses.
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-gray-600">
-          Prime Point of Sale is a business management software for fast sales transactions, stock control, and instant business reports in real time.
-
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+      <section className="hero-grid overflow-hidden pb-20 pt-16 sm:pt-24">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div className="relative z-10">
+            <div className="eyebrow"><span className="status-dot" /> Built for African retail</div>
+            <h1 className="mt-6 max-w-2xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-navy sm:text-6xl lg:text-7xl">
+              Run your business. <span className="text-gradient">Know your numbers.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+              PrimePOS connects every sale, stock movement, and outlet report in one calm, reliable workspace. Even when the internet does not cooperate.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href={whatsappBookDemoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-blue-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+              className="button-primary"
             >
-              Book a 30-day free trial
+              Start your free trial <span aria-hidden="true">↗</span>
             </Link>
             <Link
               href="/features"
-              className="rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:border-blue-900 hover:text-blue-900"
+              className="button-secondary"
             >
-              Explore Features
+              Explore the platform <span aria-hidden="true">→</span>
             </Link>
+            </div>
+            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500">
+              <span>✓ 30-day free trial</span><span>✓ No credit card</span><span>✓ Local support</span>
+            </div>
+          </div>
+
+          <div className="dashboard-stage">
+            <div className="dashboard-glow" />
+            <div className="dashboard-window">
+              <div className="dashboard-bar"><div className="window-dots"><i /><i /><i /></div><span>primepos / overview</span><b>•••</b></div>
+              <Image src="/dash.png" alt="PrimePOS dashboard showing sales and stock performance" width={1200} height={760} className="h-auto w-full" priority />
+            </div>
+            <div className="floating-kpi kpi-sales"><span className="kpi-icon">↗</span><div><small>Today&apos;s sales</small><strong>MWK 4.82M</strong><em>+18.4%</em></div></div>
+            <div className="floating-kpi kpi-stock"><span className="kpi-icon stock-icon">!</span><div><small>Stock alert</small><strong>12 products</strong><em className="warning">Need attention</em></div></div>
           </div>
         </div>
-
-        <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-50 shadow-sm transition duration-300 hover:shadow-md">
-          <Image
-            src="/pos2.png"
-            alt="PrimePOS dashboard preview"
-              width={1200}
-              height={900}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 40vw"
-              className="h-full w-full object-cover"
-            priority
-          />
-        </div>
-      </div>
     </section>
     </Reveal>
   );

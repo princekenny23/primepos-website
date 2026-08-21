@@ -55,8 +55,9 @@ export default function Pricing() {
     <section className="py-20 bg-white">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold sm:text-5xl text-gray-900">Priced in Kwacha.</h1>
-          <p className="mt-6 text-lg text-gray-600">All plans are priced in MWK. Start with a 30-day free trial.</p>
+          <p className="eyebrow justify-center"><span className="blue-dot" /> Simple, transparent pricing</p>
+          <h1 className="section-title mt-5">Choose the pace that fits your business.</h1>
+          <p className="section-copy mx-auto mt-5">All plans are priced in MWK. Start with a 30-day free trial and every core module included.</p>
         </div>
 
         <Reveal className="reveal-delay-200">
@@ -65,11 +66,11 @@ export default function Pricing() {
               <article
                 key={plan.name}
                 className={`relative rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden border ${
-                  plan.highlighted ? "border-blue-900 shadow-xl ring-2 ring-blue-900" : "border-gray-200"
+                  plan.highlighted ? "border-blue-500 shadow-xl ring-2 ring-blue-100" : "border-gray-200"
                 }`}
               >
               {plan.highlighted && (
-                <div className="bg-blue-900 px-4 py-2 text-center text-xs font-bold tracking-[0.2em] uppercase text-white">
+                <div className="bg-blue-600 px-4 py-2 text-center text-xs font-bold tracking-[0.2em] uppercase text-white">
                   MOST POPULAR
                 </div>
               )}
